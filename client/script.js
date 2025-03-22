@@ -13,7 +13,6 @@ const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/chat" // Local server URL
     : "https://demo-express-server.vercel.app/chat"; // Vercel server URL
-console.log(API_URL);
 
 const userData = {
   message: null,
@@ -135,7 +134,7 @@ messageInput.addEventListener("keydown", (e) => {
     userMessage &&
     window.innerWidth > 768
   ) {
-    console.log(userMessage);
+    // console.log(userMessage);
     handleInputMessage(e);
   }
 });
@@ -147,12 +146,12 @@ document
   .addEventListener("click", () => fileInput.click());
 
 fileInput.addEventListener("change", () => {
-  console.log("File selected", fileInput.files);
+  //console.log("File selected", fileInput.files);
   const file = fileInput.files[0];
   if (!file) return;
 
   const reader = new FileReader();
-  console.log(reader, "Reader");
+  //console.log(reader, "Reader");
 
   reader.onload = (e) => {
     fileInput.value = "";
