@@ -9,7 +9,11 @@ const chatBody = document.querySelector(".chat-body");
 const sendMessage = document.querySelector("#send-message");
 
 // Server API URL setup
-const API_URL = "http://localhost:5000/chat";
+const API_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/chat" // Local server URL
+    : "https://your-vercel-server-url.vercel.app/chat"; // Vercel server URL
+console.log(API_URL);
 
 const userData = {
   message: null,
