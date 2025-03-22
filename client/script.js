@@ -12,7 +12,7 @@ const sendMessage = document.querySelector("#send-message");
 const API_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/chat" // Local server URL
-    : "https://your-vercel-server-url.vercel.app/chat"; // Vercel server URL
+    : "https://demo-express-server.vercel.app/chat"; // Vercel server URL
 console.log(API_URL);
 
 const userData = {
